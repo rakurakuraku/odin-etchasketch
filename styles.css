@@ -2,17 +2,20 @@
     display:flex;
     flex-wrap: wrap;
     border: 2px solid black;
-    width: 50vw;
-    height: 50vw;
+  
     justify-content: space-between;
     align-items: flex-start;
     
 }
 
-#gridPoint {
+.gridPoint {
     background-color: aquamarine;
     display: flex;
     margin: none;
     border: 1px solid black;
     box-sizing: border-box;
+}
+
+.etchedPoint {
+    background-color: brown;
 }

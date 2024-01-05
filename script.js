@@ -29,7 +29,8 @@ point.style.width = pointSize + "px";
 point.style.height = pointSize + "px";
 point.addEventListener("mouseover", (event) => {
     //point.classList.add("etchedPoint");
-    point.style.backgroundColor = "purple";
+    //point.style.backgroundColor = "purple";
+    point.style.backgroundColor = "rgb(" + randoRgbValue() + ", " + randoRgbValue() + ", " + randoRgbValue() + ")";
 });
 gridContainer.appendChild(point);
 
@@ -43,3 +44,9 @@ while(trash.firstChild) {
     trash.removeChild(trash.firstChild);
 }
 }
+
+function randoRgbValue() {
+    num = Math.floor(Math.random() * 255);
+    return(num);
+}
+

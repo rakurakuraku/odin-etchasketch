@@ -9,7 +9,8 @@
 }
 
 .gridPoint {
-    background-color: aquamarine;
+    background-color: rgb(127, 255, 212);
+    opacity: 0.99;
     display: flex;
     margin: none;
     border: 1px solid black;

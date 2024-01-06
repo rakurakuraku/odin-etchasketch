@@ -28,13 +28,25 @@ point.classList.add("gridPoint");
 point.style.width = pointSize + "px";
 point.style.height = pointSize + "px";
 point.addEventListener("mouseover", (event) => {
-    //point.classList.add("etchedPoint");
-    //point.style.backgroundColor = "purple";
-    point.style.backgroundColor = "rgb(" + randoRgbValue() + ", " + randoRgbValue() + ", " + randoRgbValue() + ")";
+    let computedStyle = window.getComputedStyle(point);
+    let opacity = computedStyle.opacity;
+    //let alpha = bgColor.slice(-5, -1);
+    //console.log(opacity);
+    //console.log(alpha);
+    point.style.backgroundColor = "rgba(" + randoRgbValue() + ", " + randoRgbValue() + ", " + randoRgbValue() + ")";
+    if (opacity === "0.99") {
+        point.style.opacity = "0.1";
+    }
+    if (parseFloat(opacity) < 0.9) {
+        let newOpacity = (parseFloat(opacity));
+        newOpacity += 0.1;
+        //console.log(newOpacity);
+        point.style.opacity = `${newOpacity}`;
+    }
 });
 gridContainer.appendChild(point);
 
-//console.log('x');
+
 }
 }
 
